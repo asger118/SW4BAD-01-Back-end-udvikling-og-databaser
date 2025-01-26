@@ -8,11 +8,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Explicitly configure the ports for HTTPS redirection
-builder.WebHost.ConfigureKestrel(options =>
+/*builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(5070); // HTTP
     options.ListenAnyIP(7193, listenOptions => listenOptions.UseHttps()); // HTTPS
-});
+});*/
 
 var app = builder.Build();
 
@@ -23,7 +23,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

@@ -29,3 +29,14 @@ dotnet run
 ```bash
 dotnet build
 ```
+
+
+<h2>Docker exercise</h2>
+
+```bash
+docker build -t exercise2 .
+```
+
+```bash
+docker run --rm -p 5050:8080 exercise2
+```
